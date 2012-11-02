@@ -68,4 +68,4 @@ client.addListener 'join', (channel, nick, message) ->
     client.say chan, msg for msg in msglist
     msgs[nick] = []
 
-client.connect()S
+client.connect()
