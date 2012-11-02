@@ -5,17 +5,16 @@ irc = require 'irc'
 chan = '#Foo'
 
 client = new irc.Client 'localhost', 'mel',
-        channels: [chan]
-        autoConnect: false
+  channels: [chan]
+  autoConnect: false
 
 client.addListener 'error', (message) ->
-        console.log 'error:', message
+  console.log 'error:', message
 
 client.addListener 'registered', (m) ->
-        console.log 'registered'
-        console.log 'mel: joined chat room'
-        client.say chan, 'Send me your tired, your poor...'
-        
+  console.log 'mel: joined chat room'
+  client.say chan, 'Send me your tired, your poor...'
+  
 client.addListener 'message', (nick, to, text, message) ->
   console.log 'heard', nick, to, text
   if text.match /^!?mel /
