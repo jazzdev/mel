@@ -1,0 +1,24 @@
+mel is an irc bot to send messages to people that are offline when they reconnect
+
+chris> !mel tell jd That was a great party
+
+Then when jd reconnects
+
+mel> chris said That was a great party
+
+----
+Use USERS command to find list of logged in users.
+Or use WHOIS command find if a given user is logged in.
+
+Create a directory for each user and in that dir put
+a file for each message with the timestamp as the filename.
+
+WHOIS jd
+:922jdbrennan.local 311 bot jd ~JD localhost * :JD Brennan
+:922jdbrennan.local 312 bot jd 922jdbrennan.local :Server Info Text
+:922jdbrennan.local 319 bot jd :@#Foo #Martini
+:922jdbrennan.local 317 bot jd 361 1351802484 :seconds idle, signon time
+:922jdbrennan.local 318 bot jd :End of WHOIS list
+WHOIS kjasdf
+:922jdbrennan.local 401 bot kjasdf :No such nick or channel name
+:922jdbrennan.local 318 bot kjasdf :End of WHOIS list
