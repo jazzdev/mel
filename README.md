@@ -2,7 +2,7 @@ Description
 -----------
 
 An IRC bot that saves messages for offline users and sends
-those messages to those users when the reconnect.
+those messages to those users when they reconnect.
 
 Dependencies
 ------------
