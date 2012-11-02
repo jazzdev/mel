@@ -4,7 +4,7 @@
 irc = require 'irc'
 
 irchost = 'localhost'
-chan = '#Foo'
+chan = '#Martini'
 msgs = {}
 
 client = new irc.Client irchost, 'mel',
@@ -68,4 +68,4 @@ client.addListener 'join', (channel, nick, message) ->
     client.say chan, msg for msg in msglist
     msgs[nick] = []
 
-client.connect()
+client.connect()S
