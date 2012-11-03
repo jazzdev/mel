@@ -12,7 +12,7 @@ msgs =
 
 client = new irc.Client argv.s, 'mel',
   channels: [argv.c]
-  autoConnect: false
+  autoConnect: false	# so I can add listeners before connecting
   secure: argv.ssl
   userName: argv.u
   password: argv.p
@@ -23,9 +23,6 @@ client.addListener 'error', (error) ->
   if error.command != 'err_nosuchnick'
     console.log 'error:', error
 
-client.addListener 'registered', (m) ->
-  console.log 'mel: joined chat room'
-  
 client.addListener 'message', (nick, to, text, message) ->
   if text.match /^!?mel /
     handleCommand nick, text
