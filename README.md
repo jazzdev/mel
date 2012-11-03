@@ -7,7 +7,9 @@ those messages to those users when they reconnect.
 Dependencies
 ------------
 
-Requires [my fork][] of [node-irc][] (which fixes a bug in whois).
+Requires the latest version of [node-irc][] from github 
+(which has a recent bug fix for whois).  You can't just
+use 'npm install node-irc'.
 
   [my fork]: https://github.com/jazzdev/node-irc
   [node-irc]: https://github.com/martynsmith/node-irc
