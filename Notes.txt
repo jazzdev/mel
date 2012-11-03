@@ -22,3 +22,15 @@ WHOIS jd
 WHOIS kjasdf
 :922jdbrennan.local 401 bot kjasdf :No such nick or channel name
 :922jdbrennan.local 318 bot kjasdf :End of WHOIS list
+
+Could use the channels list to say something to a user in a different
+channel (instead of waiting for them to rejoin current channel).
+
+handeMessage { nick: 'jd',
+  user: '~JD',
+  host: 'localhost',
+  realname: 'JD Brennan',
+  server: '922jdbrennan.local',
+  serverinfo: 'Server Info Text',
+  channels: [ '#Test', '#Martini' ],
+  idle: '0' }
