@@ -58,8 +58,7 @@ handleMessage = (from, to, msg) ->
       saveMessage to, to + ", " + from + " says: " + msg
 
 saveMessage = (nick, msg) ->
-  if not msgs[nick]
-    msgs[nick] = []
+  msgs[nick] ?= []
   msgs[nick].push msg
 
 client.addListener 'join', (channel, nick, message) ->
