@@ -1,0 +1,11 @@
+{
+  "name": "mel",
+  "version": "0.1.0",
+  "author": "JD Brennan <jazzdev@gmail.com>",
+  "description": "a IRC bot that delivers messages to offline users when they reconnect",
+  "license": "MIT",
+  "dependencies" : {
+    "irc": "https://github.com/martynsmith/node-irc/tarball/master",
+    "commander": "*"
+  }
+}
