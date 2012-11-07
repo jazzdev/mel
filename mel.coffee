@@ -4,7 +4,6 @@
 irc = require 'irc'
 argv = require('commander')
   .option('-s, --server <hostname>', 'IRC server')
-  .option('-c, --channel <name>,', 'IRC channel')
   .option('--ssl', 'Use SSL')
   .option('-u, --user <login>')
   .option('-p, --pass [password]')
