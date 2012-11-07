@@ -9,5 +9,5 @@ LOGIN=`perl -MNet::Netrc -e "print Net::Netrc->lookup('$HOST')->login"`
 PASS=`perl -MNet::Netrc -e "print Net::Netrc->lookup('$HOST')->password"`
 
 $COFFEE $DIR/mel.coffee \
-  -s $HOST -c \#Martini --ssl \
+  -s $HOST --ssl \
   -u $LOGIN -p $PASS >> $DIR/daemon.log 2>&1
